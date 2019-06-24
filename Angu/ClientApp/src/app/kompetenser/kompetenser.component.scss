@@ -1,0 +1,52 @@
+
+.inline-block {
+  display: inline-block;
+}
+
+#mynavbar {
+  padding: 20px 0px;
+}
+.sub-headline {
+  padding-bottom: unset;
+  color: #389889 !important;
+  line-height: 2.5em;
+}
+
+.main-header {
+  background: url(~/assets/notebook-1280538_1280.jpg) no-repeat;
+  background-size: cover;
+  min-height: 410px;
+}
+
+#Kompetenser {
+  background: #2d2d2d;
+
+  h2 {
+    color: #b9b9b9;
+  }
+
+}
+
+.spanskill {
+  width: 100%;
+  height: 20px;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.meter {
+  width: 100%;
+  height: 20px;
+  background-color: #389889;
+}
+.skillrow {
+  padding: 20px 20px;
+}
+
+@media (max-width:991px){
+  .skillrow {
+    padding: 20px 0px;
+  }
+
+}
