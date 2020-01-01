@@ -4,17 +4,20 @@
     <!--nav-->
 
     <app-menu></app-menu>
-    <!--/ (click)="myFunc()" nav-->
+    <!--/ (click)="myFunc()" <h1 [@movePanel]="state">HELLLLLELLE LELL LL ELFAOFO A</h1>
+  nav-->
     <div class="container text-center">
-      <div class="wrapper wow fadeInUp delay-05s">
+      <div [@movePanel]="state" class="wrapper wow fadeInUp delay-05s paddingtop50">
         <h2 class="top-title">Frontendutvecklare</h2>
-        <h3 class="title">Christopher</h3>
+        <h3 class="chris-title">Christopher</h3>
         <h4 class="sub-title">Jubell</h4>
-        <!--<a download href="~/../ClientApp/src/assets/CV_210718.pdf">Download my CV</a>-->
-        <button type="submit" class="btn btn-submit">Ladda ner Mitt CV</button>
+
+        <a download href="../assets/CV_210718.pdf" class="btn btn-submit">Ladda ner Mitt CV</a>
+        <a download href="../assets/CV_210718.pdf" class="btn btn-submit">Mitt Unity Spel Alpha 1.0</a>
       </div>
     </div>
   </div>
 </header>
+<img src="../assets/notebook-1280538_1280.jpg" style="display:none" />
 <!--/ header-->
 <app-footer></app-footer>

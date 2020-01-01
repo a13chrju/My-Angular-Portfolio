@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'applogg';
+  state: string = "inactive";
+
+  ngOnInit() {
+    //this.Toggleme();
+  }
+
+  Toggleme() {
+    this.state = "active";
+  }
 }

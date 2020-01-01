@@ -2,13 +2,14 @@
   <div class="container">
     <div class="col-md-12">
       <div class="navbar-header">
-        <a href="index.html" class="navbar-brand">PORTFOLIO</a>
+        <a href="index.html" class="navbar-brand">Chris J</a>
         <div class="pull-right" id="mynavbar">
           <ul class="nav navbar-nav inline-block">
-            <li class="inline-block"><a [routerLink]="['/welcome']" routerLinkActive="active-list-item">Startsida</a></li>
-            <li class="inline-block"><a [routerLink]="['/kompentenser']" routerLinkActive="active-list-item">Kompentenser</a></li>
-            <li class="inline-block"><a>Portfolio</a></li>
-            <li class="inline-block"><a href="#contact">Contact</a></li>
+            <li class="inline-block"><a [routerLink]="['/welcome']" routerLinkActive="active-list-item">Om mig</a></li>
+            <li class="inline-block"><a [routerLink]="['/kompentenser']" routerLinkActive="active-list-item">Kompetenser</a></li>
+            <li class="inline-block"><a [routerLink]="['/portfolio']" routerLinkActive="active-list-item">Portfolio</a></li>
+            <li class="inline-block"><a [routerLink]="['/erfarenheter']" routerLinkActive="active-list-item">Erfarenheter</a></li>
+            <li class="inline-block"><a class="nav-link" [routerLink]="['/contact']" routerLinkActive="active-list-item">Kontakt</a></li>
           </ul>
         </div>
       </div>
@@ -22,8 +23,7 @@
 <nav class="navbar navbar-dark  indigo darken-2" id="menuHamburger">
 
   <!-- Navbar brand -->
-  <a class="navbar-brand" href="#">Navbar</a>
-
+  <a href="index.html" class="navbar-brand" style="margin-left:20px">Chris J</a>
   <!-- Collapse button -->
   <button class="navbar-toggler third-button" type="button" (click)="clickEvent()" data-toggle="collapse" data-target="#navbarSupportedContent22"
     aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,15 +35,11 @@
 
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="['/welcome']" routerLinkActive="active-list-item">Om mig</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="['/kompentenser']" routerLinkActive="active-list-item">Kompetenser</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="['/portfolio']" routerLinkActive="active-list-item">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="['/erfarenheter']" routerLinkActive="active-list-item">Erfarenheter</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink]="['/contact']" routerLinkActive="active-list-item">Kontakt</a></li>
     </ul>
     <!-- Links -->
 

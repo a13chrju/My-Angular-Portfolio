@@ -1,0 +1,126 @@
+<!--header-->
+<header class="main-header" id="header">
+  <div class="bg-color">
+    <!--nav-->
+
+    <app-menu></app-menu>
+    <!--/ (click)="myFunc()" nav-->
+    <div class="container text-center">
+      <div [@movePanel]="state" class="wrapper wow fadeInUp delay-05s paddingtop50">
+        <h3 class="title">Mina</h3>
+        <h4 class="sub-title">Erfarenheter</h4>
+      </div>
+    </div>
+  </div>
+</header>
+<!--/ header-->
+
+<section class="section-padding wow fadeInUp delay-05s" id="AboutMe">
+  <div class="container">
+    <div class="row white">
+      <div class="col-md-12 col-sm-12">
+        <div class="section-title">
+          <!---<h2 class="head-title black cursive">Om mig</h2>-->
+
+          <div class="row">
+
+            <div class="col-sm-12 col-md-12">
+
+              <p class="sec-para fit-middle">
+                Ytterligare program/språk -kunskaper
+              </p>
+              <div class="small-spacer"></div>
+              <div *ngFor="let kunskap of webbkunskaper">
+              
+                <div class="alert alert-success movetagleft marginfill">
+                  {{kunskap}}
+                </div>
+
+              </div>
+           
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="clear:both"></div>
+
+<section class="section-padding">
+  <div class="container">
+    <div class="row white">
+      <div class="col-md-12 col-sm-12">
+        <div class="mybox">
+          <!---<h2 class="head-title black cursive">Om mig</h2>-->
+          <div class="row">
+            <div class="col-md-4"><h2 class="fontOpen">2017 Jan - 2019 Juli</h2></div>
+            <div class="col-md-8 normallinks">
+              <p>
+                Frontendutvecklare för <a target="_blank" href="https://www.zinzino.com">Zinzino</a>. Jag utvecklade med MVC i ASP.NET. Har även jobbat mycket med
+                backend under min tid här. C# användes för backend - andra språk
+                och ramverk jag användes vid utveckling var: javascript, bootstrap, xhtml, Json, scss, entity framework, Jquery.
+              </p>
+            </div>
+
+          </div><div class="small-spacer"></div><hr />
+          <div class="small-spacer"></div>
+          <div class="row">
+            <div class="col-md-4"><h2 class="fontOpen">2016 Januari</h2></div>
+            <div class="col-md-8 normallinks">
+              <p>
+                Examensjobb för Bricknode AB. Mitt exjobb handlar om att
+                jämföra API-teknologier som används för att bygga webbtjänster. Studien jämför API-teknologier inom ASP.NET ( WCF, ASMX och
+                Web Api) samt interaktionsstilar som webbtjänster kan använda
+                sig av vid skickande av data från en webbtjänst. Resultatet bygger
+                på svarstider som tagits fram.
+              </p>
+            </div>
+
+          </div><div class="small-spacer"></div><hr />
+          <div class="small-spacer"></div>
+          <div class="row">
+            <div class="col-md-4"><h2 class="fontOpen">2015 Augusti</h2></div>
+            <div class="col-md-8 normallinks">
+              <p>
+                Backend-utvecklare för Hajfaj med Wordpress/php. Detta projekt
+                var startat av en av mina klasskamrater i högskolan och var något
+                som jag jobbade med samtidigt under studierna.
+              </p>
+            </div>
+
+          </div> <div class="small-spacer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="section-padding wow fadeInUp delay-05s" id="AboutMe">
+  <div class="container">
+    <div class="row white">
+      <div class="col-md-12 col-sm-12">
+        <div class="section-title">
+          <!---<h2 class="head-title black cursive">Om mig</h2>-->
+
+          <div class="row">
+
+            <div class="col-sm-12 col-md-12">
+
+              <p class="sec-para fit-middle">
+                *Skulle föredra att göra tester som visar interaktion av webb och praktiska saker istället för generella tidspressande tester av en enskilt språk (t.ex. js) utan interaktion av webb*
+              </p>
+              <div class="small-spacer"></div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

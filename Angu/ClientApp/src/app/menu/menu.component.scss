@@ -177,13 +177,6 @@
   border-top: 0;
 }
 
-.nav-link {
-  color: #fff !important;
-  padding: 15px 10px;
-  text-transform: uppercase;
-  background-color: transparent;
-}
-
 
 .navbar-brand {
   color: #fff;
@@ -192,22 +185,25 @@
   font-weight: 700;
   letter-spacing: 2px;
 }
-@media(max-width:600px){
+@media(max-width:997px){
   #menuHamburger {
     display:block;
   }
   #menuDesktop {
-    display: none;;
+    display: none;
   }
+ 
 }
-@media(min-width:600px) {
+@media(min-width:998px) {
   #menuHamburger {
     display: none;
   }
 
   #menuDesktop {
     display: block;
-    ;
+  }
+  .navbar-brand {
+    margin-top: 14px;
   }
 }
 
@@ -223,3 +219,18 @@
 .navbar {
   box-shadow: 2px 2px 20px transparent;
 }
+
+#menuDesktop {
+  position: fixed;
+  background-color: #4a9da0e6;
+  z-index: 99;
+  width: 100%;
+}
+
+.nav-link {
+  color: #fff;
+  padding: 15px 10px;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+

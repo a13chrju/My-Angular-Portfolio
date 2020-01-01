@@ -1,0 +1,77 @@
+.main-header {
+  background: black url(~/assets/agriculture.jpg) no-repeat;
+  background-size: cover;
+  min-height: 410px;
+  background-position: center;
+}
+
+.readmore{
+  display:none;
+}
+
+#AboutMe {
+  // padding: 30px 0px 80px 0px;
+  background: #2d2d2d;
+}
+
+@import "node_modules/compass-mixins/lib/compass/css3";
+
+body {
+  background: #f5f5f5;
+}
+
+blockquote,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.l-quote {
+  position: relative;
+  padding: 25px 25px 20px;
+  margin: 0px;
+  color: #585858;
+  background: #e6e6e6;
+
+  p {
+    color: #585858;
+  }
+}
+
+
+blockquote {
+}
+
+
+.alert-success {
+  color: #152257;
+  background-color: #7fccff;
+  border-color: #6aaeff;
+}
+
+.skillrow {
+  padding: 30px 0px;
+}
+
+
+.sub-headline {
+  text-transform: uppercase;
+  color: #498486 !important;
+  line-height: unset !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+.newtab {
+  margin-left: 10px;
+  color: #3c81ae;
+}
+
+#newtabid:hover {
+  color: #7fccff !important;
+}
+
+#newtabid {
+  cursor: pointer;
+}

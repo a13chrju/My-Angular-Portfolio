@@ -59,8 +59,10 @@ blockquote {
 
 .sub-headline {
   text-transform: uppercase;
-  color: #3c81ae !important;
-   line-height: unset !important; 
+  color: #498486 !important;
+  line-height: unset !important;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 
@@ -70,7 +72,7 @@ blockquote {
 }
 
 #newtabid:hover {
-  color: #b9b9b9 !important;
+  color: #7fccff !important;
 }
 
 #newtabid {

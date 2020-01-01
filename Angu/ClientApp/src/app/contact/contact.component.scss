@@ -1,0 +1,27 @@
+.main-header {
+  background: url(~/assets/okeeej.jpg) no-repeat;
+  background-size: cover;
+  min-height: 410px;
+  background-position: top right;
+}
+
+input, textarea, label, select {
+  font-size: 16px;
+}
+
+.has-error {
+  input,textarea {
+    border-color: #f16b65;
+  }
+}
+
+.alert {
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 450px) and (min-width: 20px){
+  .main-header {
+  background-position: -70vw !important;
+  }
+
+}

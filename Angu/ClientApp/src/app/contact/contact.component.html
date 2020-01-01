@@ -1,0 +1,69 @@
+<!--header-->
+<header class="main-header" id="header">
+  <div class="bg-color">
+    <!--nav-->
+
+    <app-menu></app-menu>
+    <!--/ (click)="myFunc()" nav-->
+    <div class="container text-center">
+      <div [@movePanel]="state" class="wrapper wow fadeInUp delay-05s paddingtop50">
+        <h3 class="chris-title">Kontakt</h3>
+      </div>
+    </div>
+  </div>
+</header>
+<!--/ header-->
+
+<section class="section-padding wow fadeInUp delay-05s" id="AboutMe">
+  <div class="container">
+    <div class="row white">
+      <div class="col-md-12 col-sm-12">
+        <div class="section-title">
+          <!---<h2 class="head-title black cursive">Om mig</h2>-->
+          <!--{{myForm.value | json}}-->
+          <div class="row">
+
+            <div class="col-sm-12 col-md-12">
+
+              <p class="sec-para fit-middle">
+                Hej, om du vill kontakta mig så kan du använda detta formulär nedan:
+              </p>
+              <div class="small-spacer"></div>
+              <form *ngIf="isvisiblevar" class="row" [formGroup]="myForm" (ngSubmit)='onSubmit()'>
+                <div class="form-group col-md-6" [ngClass]="{'has-error' : myForm.get('email').errors && myForm.touched}">
+                  <label for="exampleFormControlInput1">E-postadress</label>
+                  <input formControlName="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@hotmail.com">
+                  <p *ngIf="myForm.get('email').errors && myForm.touched">Behövs en strukturell korrekt email adress</p>
+                </div>
+                <div class="form-group col-md-6" [ngClass]="{'has-error' : myForm.get('title').errors && myForm.touched}">
+                  <label for="exampleFormControlInput1">Titel</label>
+                  <input formControlName="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Hi! How are you?">
+                  <p *ngIf="myForm.get('title').errors && myForm.touched">Saknar ett värde</p>
+                </div>
+
+                <div class="form-group col-md-12" [ngClass]="{'has-error' : myForm.get('message').errors && myForm.touched}">
+                  <label for="exampleFormControlTextarea1">Meddelande</label>
+                  <textarea formControlName="message" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                  <p *ngIf="myForm.get('message').errors && myForm.touched">Minimum 25 bokstäver</p>
+                </div>
+                <div class="form-group col-md-12">
+
+                  <button [disabled]="myForm.invalid" type="submit" class="btn btn-primary mb-2">Skicka mejl</button>
+                </div>
+              </form>
+              <div class="row" *ngIf="showMsg">
+                <div class="col-xs-12 col-md-12 col-lg-12">
+                  <p class="alert alert-success">
+                    <strong>Mejl skickat!</strong> Ha en fortsatt bra dag.
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -11,7 +11,7 @@
             <div class="col-sm-12 col-md-12">
 
               <p class="sec-para fit-middle">
-                Hej, jag är en person som gillar problemlösning. Inresset för att skapa saker har alltid funnits hos mig.
+                Hej, jag är en person som gillar problemlösning. Intresset för att skapa saker har alltid funnits hos mig.
                 När jag var liten drömde jag alltid om att skapa mina egna dataspel och nu det senaste har jag själv lärt mig att programmera nätverksbaserade 3D dataspel i Unity. Utöver detta och programmering mot webben har jag även ett intresse för att redigera film.
               </p>
 
@@ -28,7 +28,7 @@
     <div class="row white">
       <div class="col-md-12 col-sm-12">
         <div class="section-title">
-          <a target="_blank" href="/mygame"><h2 id="newtabid" class="sub-headline">Hobbyprojekt - Spelutveckling i Unity 3D <span class="newtab glyphicon glyphicon-new-window"></span></h2></a>
+          <a target="_blank" href="http://christopherj-002-site1.gtempurl.com/"><h2 id="newtabid" class="sub-headline">Hobbyprojekt - Spelutveckling i Unity 3D <span class="newtab glyphicon glyphicon-new-window"></span></h2></a>
 
           <div class="row">
             <div class="col-sm-6 col-md-7 order-md-5">
@@ -85,10 +85,23 @@
 
             <div class="col-sm-12 col-md-12">
 
-              <p class="sec-para fit-middle">
-                Hej, jag är en person som gillar problemlösning. Inresset för att skapa saker har alltid funnits hos mig.
-                När jag var liten drömde jag alltid om att skapa mina egna dataspel och nu det senaste har jag själv lärt mig att programmera nätverksbaserade 3D dataspel i Unity. Utöver detta och programmering mot webben har jag även ett intresse för att redigera film.
-              </p>
+            
+              <div class="row" *ngIf="posts.length > 0">
+
+                <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let post of posts">
+                  <div (click)="goToBlog(post.id)" class="card">
+                    <img src="{{post.thumbnail}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h2 class="card-title" [innerHtml]="post.title"></h2>
+                      <p class="card-text" [innerHtml]="post.short_desc"></p>
+                      <div class="small-spacer"></div>
+                      <div class="btn btn-primary stick-btn-bottom">Öppna upp</div>
+                    </div>
+                  </div>
+                 
+                </div>
+
+              </div>
 
             </div>
           </div>

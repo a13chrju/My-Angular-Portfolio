@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
 import { Iblogg } from './blogg';
 
@@ -8,12 +8,27 @@ import { Iblogg } from './blogg';
   providedIn: 'root'
 })
 export class BlogfetcherService {
-  private tempUrl = 'api/SampleData/WeatherForecasts';
+  private tempUrl = 'http://christopherj-002-site4.gtempurl.com/api/values/Get';
+  private testUrl = 'http://localhost:7729/api/values/SendMessage';// just my localhost connection
+  private SendMessageWebAPIurl = 'http://christopherj-002-site4.gtempurl.com/api/values/SendMessage';
 
   constructor(private http: HttpClient) { }
 
-  getPosts(): Observable<Iblogg[]> {
-    return this.http.get<Iblogg[]>(this.tempUrl).pipe(
+  sendMessage(formvalue): Observable<any[]> {
+   // const url = "email=fd&message=fsfsa&title=fdsfsdfs";
+    //let param1 = new HttpParams().set("message", formvalue.value.message);
+   // let param2 = new HttpParams().set("title", formvalue.value.title);
+    //let param3 = new HttpParams().set("email", formvalue.value.email);
+
+    return this.http.get<any[]>(this.SendMessageWebAPIurl, { params: formvalue }).pipe(
+      tap(data => console.log("fetched data: " + data)),
+      catchError(this.handleError)
+
+    );
+  }
+
+  getPosts(): Observable<any[]> {
+    return this.http.get<any[]>(this.tempUrl).pipe(
       tap(data => console.log("fetched data: " + data)),
       catchError(this.handleError)
 
